@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { SetStateAction, useState } from 'react';
 import { Navbar, Center, Tooltip, UnstyledButton, createStyles, Stack } from '@mantine/core';
 import {
   TablerIcon,
@@ -9,6 +9,7 @@ import {
   IconUser,
 } from '@tabler/icons';
 import { MantineLogo } from '@mantine/ds';
+import { useRouter } from 'next/router';
 
 const useStyles = createStyles((theme) => ({
   link: {
@@ -54,20 +55,29 @@ function NavbarLink({ icon: Icon, label, active, onClick }: NavbarLinkProps) {
 }
   
 const mockdata = [
-    { icon: IconUser, label: 'Profile' },  
+    { icon: IconUser, label: 'Profile'},  
     { icon: IconHome2, label: 'Home' },
     { icon: IconSearch, label: 'Explore' },
 ];
 
+
 export function NavbarMinimal(){
+    const router = useRouter()
     const [active, setActive] = useState(2);
-  
+
+    function clickAction(url: string, index: number){
+      setActive(index)
+      router.push(url)
+    }
+
     const links = mockdata.map((link, index) => (
       <NavbarLink
         {...link}
         key={link.label}
         active={index === active}
-        onClick={() => setActive(index)}
+        onClick={() => 
+          clickAction(link.label.toLowerCase(), index)
+        }
       />
     ));
   
@@ -83,8 +93,8 @@ export function NavbarMinimal(){
         </Navbar.Section>
         <Navbar.Section>
           <Stack align='center' spacing={15} >
-            <NavbarLink icon={IconSettings} label="Settings" />
-            <NavbarLink icon={IconLogout} label="Logout" />
+            <NavbarLink icon={IconSettings} label="Settings"  active={active === 5} onClick={() => clickAction('/settings', 5)}/>
+            <NavbarLink icon={IconLogout} label="Logout" onClick={() => router.push('')} />
           </Stack>
         </Navbar.Section>
       </Navbar>

@@ -61,32 +61,32 @@ function UserCardImage({ image, avatar, name, job, stats }: UserCardImageProps) 
 
 export default function Profile(){
     return (
-        <Grid align="top" mx={-30}>
+        <Grid align="top">
             <Grid.Col span={3} mr={20}>
                 <UserCardImage image={'https://thumbs.dreamstime.com/b/modern-web-development-background-abstract-pieces-php-code-modern-web-development-background-abstract-pieces-php-code-138136042.jpg'} avatar={'https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_1280.png'} name={'@manudithur'} job={'Fullstack dev'} stats={[{label: 'Followers', value: '222'}, {label: 'Following', value: '523'}, {label: 'Codeets', value: '24'}]} ></UserCardImage>
             </Grid.Col>
             <Grid.Col span={8}>
-                <ScrollArea style={{height: 800}}>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
-                    name: '@manudithur',
-                    image: ''
-                }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
-                    name: '@manudithur',
-                    image: ''
-                }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
-                    name: '@manudithur',
-                    image: ''
-                }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
-                    name: '@manudithur',
-                    image: ''
-                }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
-                    name: '@@manudithur',
-                    image: ''
-                }}></Codeet>
+                <ScrollArea style={{height: 800}} type={'never'}>
+                  <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                      name: '@manudithur',
+                      image: ''
+                  }}></Codeet>
+                  <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                      name: '@manudithur',
+                      image: ''
+                  }}></Codeet>
+                  <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                      name: '@manudithur',
+                      image: ''
+                  }}></Codeet>
+                  <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                      name: '@manudithur',
+                      image: ''
+                  }}></Codeet>
+                  <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                      name: '@@manudithur',
+                      image: ''
+                  }}></Codeet>
                 </ScrollArea>
             </Grid.Col>
         </Grid>

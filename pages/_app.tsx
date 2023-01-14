@@ -17,7 +17,7 @@ export default function App(props: AppProps) {
         <Grid.Col span={1}>
           <NavbarMinimal></NavbarMinimal>
         </Grid.Col>
-        <Grid.Col span={11}>
+        <Grid.Col span={10}>
             <MantineProvider
                 withGlobalStyles
                 withNormalizeCSS
@@ -28,6 +28,8 @@ export default function App(props: AppProps) {
               >
               <Component {...pageProps} />
             </MantineProvider>
+        </Grid.Col>
+        <Grid.Col span={1}>
         </Grid.Col>
       </Grid>
       </BackgroundImage>
