@@ -1,7 +1,11 @@
-import { Button, Container, Grid, Group, ScrollArea, Title } from "@mantine/core";
+import { Button, Grid, Group, ScrollArea, Title } from "@mantine/core";
+import { useRouter } from "next/router";
 import Codeet from "../components/codeet";
 
 export default function Home(){
+    
+    const router = useRouter()
+
     return (
         <Grid pt={50}>
 
@@ -10,7 +14,9 @@ export default function Home(){
             <ScrollArea style={{height: 800}} type={'never'} offsetScrollbars>
                 <Group position="apart" pb={30}>
                     <Title>Your Feed</Title>
-                    <Button size='lg' variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}radius='md'>New Codeet</Button>
+                    <Button size='lg' variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}radius='md'
+                        onClick={() => router.push('/new')}
+                    >New Codeet</Button>
                 </Group>
                 <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
                     name: '@manudithur',
