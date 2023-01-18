@@ -11,30 +11,30 @@ export default function Home(){
 
             <Grid.Col span={2}></Grid.Col>
             <Grid.Col span={8}>
-            <ScrollArea style={{height: 800}} type={'never'} offsetScrollbars>
+            <ScrollArea style={{height: 900}} type={'never'} offsetScrollbars>
                 <Group position="apart" pb={30}>
                     <Title>Your Feed</Title>
                     <Button size='lg' variant="gradient" gradient={{ from: 'indigo', to: 'cyan' }}radius='md'
                         onClick={() => router.push('/new')}
                     >New Codeet</Button>
                 </Group>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                <Codeet postedAt={'10 minutes ago'} body={'Wassup. Look at the great code I have done!!!'} author={{
                     name: '@manudithur',
                     image: ''
                 }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                <Codeet postedAt={'10 minutes ago'} body={'Wassup. Look at the great code I have done!!!'} author={{
                     name: '@manudithur',
                     image: ''
                 }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                <Codeet postedAt={'10 minutes ago'} body={'Wassup. Look at the great code I have done!!!'} author={{
                     name: '@manudithur',
                     image: ''
                 }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                <Codeet postedAt={'10 minutes ago'} body={'Wassup. Look at the great code I have done!!!'} author={{
                     name: '@manudithur',
                     image: ''
                 }}></Codeet>
-                <Codeet postedAt={'10 minutes ago'} body={'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent nulla nisl, porta eget enim quis, porttitor ultricies tortor. Morbi eleifend augue leo, et dictum justo viverra vel. Donec magna sapien, semper quis malesuada at, hendrerit vitae nibh. Nam facilisis id ante id faucibus. Sed pretium pharetra elit, quis faucibus arcu.'} author={{
+                <Codeet postedAt={'10 minutes ago'} body={'Wassup. Look at the great code I have done!!!'} author={{
                     name: '@manudithur',
                     image: ''
                 }}></Codeet>
