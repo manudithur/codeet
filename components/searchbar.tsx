@@ -8,7 +8,8 @@ export default function InputWithButton(props: TextInputProps) {
     <TextInput
       icon={<IconSearch size={18} stroke={1.5} />}
       radius="xl"
-      size="md"
+      style={{border: 'solid 1px grey', borderRadius: '40px'}}
+      size="lg"
       rightSection={
         <ActionIcon size={32} radius="xl" color={theme.primaryColor} variant="filled">
           {theme.dir === 'ltr' ? (
@@ -18,7 +19,7 @@ export default function InputWithButton(props: TextInputProps) {
           )}
         </ActionIcon>
       }
-      placeholder="Search questions"
+      placeholder="Search user"
       rightSectionWidth={42}
       {...props}
     />
