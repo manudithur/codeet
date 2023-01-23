@@ -11,7 +11,7 @@ import {
     Button,
 } from '@mantine/core';
 import { useRouter } from 'next/router';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { login } from '../backend/firebase';
   
 export default function Login() {
@@ -21,18 +21,32 @@ export default function Login() {
 
     const [password, setPassword] = useState('')
 
+    const [error, setError] = useState(true)
+    const [errorString, setErrorString] =  useState('')
+    var isLoading = false
+
+    async function LoginManager() {
+        var ret = await Login()
+        if(ret){
+            router.push('/home')
+        }
+    }
+    
+
     async function Login(){
-        var error = false
-        var result = null
+        isLoading = true
+        var success = true
         try{
-            result = await login(email, password)
-        } catch (e){
-            error = true
+            setError(false)
+            setErrorString('')
+            await login(email, password)
+        } catch (e: any){
+            success = false
+            setError(true)
+            setErrorString(e.message)
         } finally{
-            console.log(JSON.stringify(result))
-            if(error == false){
-                router.push('home')
-            }
+            isLoading = false
+            return success
         }
     }
 
@@ -50,17 +64,19 @@ export default function Login() {
                     Create account
                 </Anchor>
             </Text>
-
             <Paper withBorder shadow="md" p={30} mt={30} radius="md">
-                <TextInput label="Email" placeholder="name@email.com" value={email}  onChange={(e) => setEmail(e.target.value)} required  />
-                <PasswordInput label="Password" placeholder="your password" value={password} onChange={(e) => setPassword(e.target.value)} required mt="md" />
+                <Text color="red" size="sm" align="center" my={'20'}>
+                {errorString}
+                </Text>
+                <TextInput label="Email" placeholder="name@email.com" value={email} error={error} onChange={(e) => setEmail(e.target.value)} required  />
+                <PasswordInput label="Password" placeholder="your password" value={password} error={error} onChange={(e) => setPassword(e.target.value)} required mt="md" />
                 {/* <Group position="apart" mt="lg">
                     <Checkbox label="Remember me" sx={{ lineHeight: 1 }} />
                     <Anchor<'a'> onClick={(event) => event.preventDefault()} href="#" size="sm">
                         Forgot password?
                     </Anchor>
                 </Group> */}
-                <Button fullWidth mt="xl" onClick={() => Login()}>
+                <Button fullWidth mt="xl" onClick={() => LoginManager()}>
                     Sign in
                 </Button>
             </Paper>
