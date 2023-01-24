@@ -1,13 +1,11 @@
 import {
     TextInput,
     PasswordInput,
-    Checkbox,
     Anchor,
     Paper,
     Title,
     Text,
     Container,
-    Group,
     Button,
 } from '@mantine/core';
 import { useRouter } from 'next/router';
@@ -21,9 +19,8 @@ export default function Login() {
 
     const [password, setPassword] = useState('')
 
-    const [error, setError] = useState(true)
+    const [error, setError] = useState(false)
     const [errorString, setErrorString] =  useState('')
-    var isLoading = false
 
     async function LoginManager() {
         var ret = await Login()
@@ -34,7 +31,6 @@ export default function Login() {
     
 
     async function Login(){
-        isLoading = true
         var success = true
         try{
             setError(false)
@@ -45,7 +41,6 @@ export default function Login() {
             setError(true)
             setErrorString(e.message)
         } finally{
-            isLoading = false
             return success
         }
     }
@@ -54,13 +49,13 @@ export default function Login() {
         <Container size={500} my={40}>
             <Title
                 align="center"
-                sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}`, fontWeight: 900, fontSize: 50})}
+                sx={(theme) => ({ fontFamily: `Greycliff CF, ${theme.fontFamily}`, fontWeight: 900, fontSize: 40})}
             >
                 Welcome back!
             </Title>
             <Text color="dimmed" size="md" align="center" mt={5}>
                 Do not have an account yet?{' '}
-                <Anchor<'a'> href="#" size="sm" onClick={(event) => event.preventDefault()}>
+                <Anchor<'a'> href="#" size="sm" onClick={() => router.push('/register')}>
                     Create account
                 </Anchor>
             </Text>

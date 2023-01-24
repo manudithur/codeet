@@ -5,6 +5,7 @@ import { NavbarMinimal } from '../components/navbar';
 import '../styles/globals.css'
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
+import { useState } from 'react';
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -24,10 +25,9 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
-
 export default function App(props: AppProps) {
   const { Component, pageProps } = props;
-
+  
   return (
     <>
       <Head>
