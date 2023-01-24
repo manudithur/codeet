@@ -8,7 +8,7 @@ export default function InputWithButton(props: TextInputProps) {
     <TextInput
       icon={<IconSearch size={18} stroke={1.5} />}
       radius="xl"
-      style={{border: 'solid 1px grey', borderRadius: '40px'}}
+      style={{border: 'solid 2px light-grey', borderRadius: '40px'}}
       size="lg"
       rightSection={
         <ActionIcon size={32} radius="xl" color={theme.primaryColor} variant="filled">
