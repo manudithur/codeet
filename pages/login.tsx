@@ -23,10 +23,7 @@ export default function Login() {
     const [errorString, setErrorString] =  useState('')
 
     async function LoginManager() {
-        var ret = await Login()
-        if(ret){
-            router.push('/home')
-        }
+        await Login()
     }
     
 
