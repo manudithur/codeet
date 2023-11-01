@@ -18,13 +18,13 @@ import { useRouter } from 'next/router';
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-  apiKey: "AIzaSyDYTtlBtN8J3a5DxawRMxIzdTW0HG27OLw",
-  authDomain: "codeet-d0315.firebaseapp.com",
-  projectId: "codeet-d0315",
-  storageBucket: "codeet-d0315.appspot.com",
-  messagingSenderId: "794009114257",
-  appId: "1:794009114257:web:0024821d4d359b9682d130",
-  measurementId: "G-HDV2X573T3"
+  apiKey: "",
+  authDomain: "",
+  projectId: "",
+  storageBucket: "",
+  messagingSenderId: "",
+  appId: "",
+  measurementId: ""
 };
 
 // Initialize Firebase
